@@ -7,18 +7,16 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow:row wrap;
 }
 
 .container{
-	max-width: 480px;
-	width: 100%;
+	max-width: 1200px;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
 }
-
 h1,
 h2,
 h3 {
@@ -30,7 +28,7 @@ h1 {
 	font-size: 1.875em;
 }
 h2 {
-	font-size: 1.5em;
+	font-size: 1.125em;
 }
 h3 {
 	font-size: .75em;
@@ -39,12 +37,16 @@ h3 {
 p {
 	font-size: .875em;
 	line-height: 21px;
-    padding: 0 30px;
+}
+ul {
+	margin: 0;
 }
 
 /*The widths are in a percentage!*/
 header {
-	width: 90%;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -52,18 +54,17 @@ header {
 }
 
 header h1 {
-	padding: 15px 30px 0 30px;
+	margin: 0;
+    padding: 38px 20px 20px 20px; 
+    border-bottom: 3px solid #77a466; 
+    width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
-
 header nav {
-	border-top: 3px solid #77a466;
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    padding: 20px 0; 
+    width: 100%; 
 }
 header nav ul {
 	margin: 0;
@@ -73,7 +74,7 @@ header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: 10px 10px;
+	padding: 10px 0;
 	list-style: none;
 }
 header nav ul li a{
@@ -84,7 +85,6 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -98,41 +98,26 @@ header nav ul li a{
 	align-items: center;
 }
 .main-image img {
-	width: 90%;
+	width: 100%;
 	border-bottom: 3px solid #77a466;
-	border-top: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-	width: 90%;
-}
 .main-title h2 {
-	padding: 5px 0 0 15px;
+	padding: 5px 0;
 	color: #77a466;
-	font-size: 1.15em;
+	text-align: center;
 }
 .main-title p {
-	padding: 0 0 0 15px;
+	padding: 0;
 	font-size: 1em;
-	line-height: 30px;
+	line-height: 1.5625;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 80%;
-	height: auto;
-	border-top: 1px solid #eee;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column;
-}
-.section-one h3,
-.section-two h3,
-.section-three h3 {
-	padding: 10px 30px;
+    border-top: 1px solid #eee;
+    width: 100%;
 }
 .menu {
 	list-style: none;
@@ -146,27 +131,70 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125;
 }
 
 .address {
 	font-size: 1em;
-	line-height: 24px;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	margin: 0 auto;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
-	color: #77a466;
 	font-size: .875em;
+	color: #77a466;
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+        flex-basis: 30%;
+        border-top: none;
+    }
+
+    .section-two {
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        border-bottom: none;
+        width: 30%;
+        padding: 0;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
